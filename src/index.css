@@ -1,0 +1,285 @@
+/* navbar */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 1.2);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 22px;
+    position: relative;
+    transition: color 0.5s ease;
+}
+
+.nav-links a:hover{
+    color: #22d3ee;
+}
+
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #38bdf8;
+    transition: width .3s ease;
+}
+
+.nav-links a:hover::after{
+    width: 100%;
+
+}
+
+.nav-links li{
+    cursor: pointer;
+}
+
+.nav-btn{
+    padding: 10px 10px;
+    border: none;
+    background: #38bdf8;
+    border-radius: 6px;
+    cursor:pointer;
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    color: rgba(255, 255, 255, 0.637);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Gardee la meme position navbar au mobile qu'en ordi */
+
+@media (max-width:600px){
+
+    .navbar {
+        padding:  15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-btn {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+
+}
+
+/* Hero */
+
+.hero{
+    height: 100vh;
+    padding-top: 80px;
+    background: linear-gradient(rgba(39, 39, 39, 0.5), rgba(0, 13, 48, 0.514)), url("https://cdn.static-media.blent.ai/photos/blog/photo-1518770660439-4636190af475.jpg") center / cover ;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content{
+    padding-left: 60px;
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.hero-content h1{
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-content span{
+    color: #22d3ee;
+}
+
+.hero-content p{
+    color:#ffffff;
+    margin-bottom: 30px;
+}
+
+.hero-buttons button{
+    padding: 12px 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #00a5ec;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-buttons .outline{
+    background: rgba(255, 255, 255, 0.075);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* Features */
+
+.features{
+    padding: 100px 60px;
+    background: #020617;
+    text-align: center;
+    color: white;
+}
+
+.features h2{
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.feature-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature-card{
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover{
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* Stats  */
+
+
+.stats{
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 40px;
+    background: #020617;
+    text-align: center;
+}
+
+.stats h3{
+    font-size: 36px;
+    color: #38bdf8;
+}
+
+.stats p{
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+
+
+/* services */
+
+
+.services{
+    padding: 100px 60px;
+    background:#0f172a;
+    text-align: center;
+    color: white;
+}
+
+.services h2{
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.service-grid{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.service-card{
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+.service-card:hover{
+    transform: translateY(-8px);
+}
+
+
+/* CTA  */
+
+.cta{
+    padding: 100px 40px;
+    background: #020617;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta h2{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.cta button{
+    padding: 14px 28px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Footer  */
+
+.footer{
+    padding: 30px;
+    background: #000000;
+    text-align: center;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 7vh;
+}

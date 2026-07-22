@@ -1,0 +1,56 @@
+.hero{
+    height: 100vh;
+    padding-top: 80px;
+    background-image: url("https://cdn.static-media.blent.ai/photos/blog/photo-1518770660439-4636190af475.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content{
+    padding-left: 60px;
+    max-width: 600px;
+    color: white;
+}
+
+
+.hero-content h1{
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+.hero-content span{
+    color: #22d3ee;
+}
+
+.hero-content p{
+    color:#ffffff;
+    margin-bottom: 30px;
+}
+
+.hero-buttons button{
+    padding: 12px 15px;
+    margin-right: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #34bdf8;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-buttons .outline{
+    background: transparent;
+    border: 1px solid white;
+}
+
